@@ -3,6 +3,8 @@ import 'package:flutter_application_2/view/custom_widget/my_theme.dart';
 import 'package:flutter_application_2/view/welcome_page/components/background.dart';
 import 'package:flutter_application_2/view/welcome_page/components/customButton.dart';
 
+//https://github.com/alishah514/flutter_bukhari.git
+
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
   @override
