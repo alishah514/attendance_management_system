@@ -45,9 +45,10 @@ class SignUp extends StatelessWidget {
                   useridController: nameController,
                   userIdErrorText: "Name cannot be empty",
                   userIdHintText: "Enter Name",
-                  userIdHintTextColor: Colors.black,
+                  userIdHintTextColor: Color.fromARGB(255, 9, 70, 121),
                   userIdTextFieldPrefixIcon: Icons.person,
-                  userIdTextFieldPrefixIconColor: Colors.purple,
+                  userIdTextFieldPrefixIconColor:
+                      Color.fromARGB(255, 9, 70, 121),
                   onUserIdValueChange: (value) {},
                 ),
               ),
@@ -56,9 +57,10 @@ class SignUp extends StatelessWidget {
                   useridController: rollnoController,
                   userIdErrorText: "Roll No cannot be empty",
                   userIdHintText: "Enter Roll No",
-                  userIdHintTextColor: Colors.black,
+                  userIdHintTextColor: Color.fromARGB(255, 9, 70, 121),
                   userIdTextFieldPrefixIcon: Icons.numbers_rounded,
-                  userIdTextFieldPrefixIconColor: Colors.purple,
+                  userIdTextFieldPrefixIconColor:
+                      Color.fromARGB(255, 9, 70, 121),
                   onUserIdValueChange: (value) {},
                 ),
               ),
@@ -67,9 +69,10 @@ class SignUp extends StatelessWidget {
                   useridController: mobileController,
                   userIdErrorText: "Mobile cannot be empty",
                   userIdHintText: "Enter Mobile",
-                  userIdHintTextColor: Colors.black,
+                  userIdHintTextColor: Color.fromARGB(255, 9, 70, 121),
                   userIdTextFieldPrefixIcon: Icons.mobile_friendly,
-                  userIdTextFieldPrefixIconColor: Colors.purple,
+                  userIdTextFieldPrefixIconColor:
+                      Color.fromARGB(255, 9, 70, 121),
                   onUserIdValueChange: (value) {},
                 ),
               ),
@@ -78,9 +81,10 @@ class SignUp extends StatelessWidget {
                   useridController: passController,
                   userIdErrorText: "Password is wrong",
                   userIdHintText: "Enter Password",
-                  userIdHintTextColor: Colors.black,
+                  userIdHintTextColor: Color.fromARGB(255, 9, 70, 121),
                   userIdTextFieldPrefixIcon: Icons.lock,
-                  userIdTextFieldPrefixIconColor: Colors.purple,
+                  userIdTextFieldPrefixIconColor:
+                      Color.fromARGB(255, 9, 70, 121),
                   onUserIdValueChange: (value) {},
                 ),
               ),
@@ -89,9 +93,10 @@ class SignUp extends StatelessWidget {
                   useridController: confirmpassController,
                   userIdErrorText: "Doesn't match with the password",
                   userIdHintText: "Confirm Password",
-                  userIdHintTextColor: Colors.black,
+                  userIdHintTextColor: Color.fromARGB(255, 9, 70, 121),
                   userIdTextFieldPrefixIcon: Icons.lock,
-                  userIdTextFieldPrefixIconColor: Colors.purple,
+                  userIdTextFieldPrefixIconColor:
+                      Color.fromARGB(255, 9, 70, 121),
                   onUserIdValueChange: (value) {},
                 ),
               ),
@@ -102,7 +107,7 @@ class SignUp extends StatelessWidget {
                 height: 10,
               ),
               customButton(
-                buttonColor: MyTheme.loginButtonColor,
+                buttonColor: Color.fromARGB(255, 9, 70, 121),
                 buttonText: "Sign Up",
                 textColor: Colors.white,
                 handleButtonClick: () {
@@ -131,7 +136,7 @@ class SignUp extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
-                        color: Colors.purple,
+                        color: Color.fromARGB(255, 9, 70, 121),
                       ),
                     ),
                     onTap: () {

@@ -18,18 +18,18 @@ class GenderSelection extends StatelessWidget {
         children: [
           Icon(
             Icons.person,
-            color: Colors.purple,
+            color: Color.fromARGB(255, 9, 70, 121),
           ),
           SizedBox(
             width: 10,
           ),
-          Expanded(
+          const Expanded(
             child: Text(
               "Gender",
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Colors.purple),
+                  color: Color.fromARGB(255, 9, 70, 121)),
             ),
           ),
           Row(
@@ -41,8 +41,9 @@ class GenderSelection extends StatelessWidget {
                   onChanged: (Value) {
                     genderSelectionController.onChangeGender(Value);
                   },
-                  activeColor: Colors.purple,
-                  fillColor: MaterialStateProperty.all(Colors.purple),
+                  activeColor: Color.fromARGB(255, 9, 70, 121),
+                  fillColor: MaterialStateProperty.all(
+                      Color.fromARGB(255, 9, 70, 121)),
                 ),
               ),
               const Text(
@@ -50,7 +51,7 @@ class GenderSelection extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Colors.purple,
+                  color: Color.fromARGB(255, 9, 70, 121),
                 ),
               )
             ],
@@ -63,15 +64,16 @@ class GenderSelection extends StatelessWidget {
                     onChanged: (Value) {
                       genderSelectionController.onChangeGender(Value);
                     },
-                    activeColor: Colors.purple,
-                    fillColor: MaterialStateProperty.all(Colors.purple),
+                    activeColor: Color.fromARGB(255, 9, 70, 121),
+                    fillColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 9, 70, 121)),
                   )),
               const Text(
                 "Female",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Colors.purple,
+                  color: Color.fromARGB(255, 9, 70, 121),
                 ),
               )
             ],
