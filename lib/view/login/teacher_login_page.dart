@@ -1,7 +1,4 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/view/custom_widget/my_theme.dart';
 import 'package:flutter_application_2/view/login/components/login_background.dart';
 import 'package:flutter_application_2/view/login/components/password_field.dart';
 import 'package:flutter_application_2/view/signup/signup.dart';
@@ -10,17 +7,17 @@ import 'package:flutter_application_2/view/welcome_page/components/customButton.
 import 'components/textfield_decorator.dart';
 import 'components/userId_text_field.dart';
 
-class LoginPage extends StatelessWidget {
+class TeacherLoginPage extends StatelessWidget {
   final _formkey = GlobalKey<FormState>();
   TextEditingController useridController = TextEditingController();
   TextEditingController userPassController = TextEditingController();
-  String userIdErrorText = "user id can not be empty";
-  String userIdHintText = "Enter User";
-  Color userIdHintTextColor = Colors.purple;
+  String userIdErrorText = "teacher id can not be empty";
+  String userIdHintText = "Enter Teacher ID";
+  Color userIdHintTextColor = Color.fromARGB(255, 0, 110, 4);
   IconData userIdTextFieldPrefixIcon = Icons.person;
-  Color userIdTextFieldPrefixIconColor = Colors.purple;
+  Color userIdTextFieldPrefixIconColor = Color.fromARGB(255, 0, 110, 4);
 
-  LoginPage({Key? key}) : super(key: key);
+  TeacherLoginPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +26,16 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/images/Login.png"),
+              Text(
+                "WELCOME TEACHERS",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                ),
+              ),
+              Image.asset("images/teacher.png"),
               const Text(
-                "Login",
+                "Please Login to Continue",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -61,11 +65,12 @@ class LoginPage extends StatelessWidget {
                         userPassController: userPassController,
                         userPassErrorText: "password can't be empty",
                         userPassHintText: "Enter Password",
-                        userPassHintTextColor: Colors.purple,
+                        userPassHintTextColor: Color.fromARGB(255, 0, 110, 4),
                         suffixIcon: Icons.visibility_off,
-                        suffixIconColor: Colors.purple,
+                        suffixIconColor: Color.fromARGB(255, 0, 110, 4),
                         userPassTextFieldPrefixIcon: Icons.lock,
-                        userPassTextFieldPrefixIconColor: Colors.purple,
+                        userPassTextFieldPrefixIconColor:
+                            Color.fromARGB(255, 0, 110, 4),
                         onUserPassValueChange: (value) {
                           print("pass value $value");
                         },
@@ -75,7 +80,7 @@ class LoginPage extends StatelessWidget {
                       height: 10,
                     ),
                     customButton(
-                      buttonColor: MyTheme.loginButtonColor,
+                      buttonColor: Color.fromARGB(255, 0, 110, 4),
                       buttonText: "Login",
                       textColor: Colors.white,
                       handleButtonClick: () {
@@ -85,35 +90,35 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Don't have account?",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(width: 5),
-                        InkWell(
-                          child: const Text(
-                            "Sign Up",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.purple,
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SignUp(),
-                              ),
-                            );
-                          },
-                        ),
-                      ],
-                    )
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     const Text(
+                    //       "Don't have account?",
+                    //       style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //       ),
+                    //     ),
+                    //     const SizedBox(width: 5),
+                    //     // InkWell(
+                    //     //   child: const Text(
+                    //     //     "Sign Up",
+                    //     //     style: TextStyle(
+                    //     //       fontWeight: FontWeight.bold,
+                    //     //       color: Color.fromARGB(255, 0, 110, 4),
+                    //     //     ),
+                    //     //   ),
+                    //     //   onTap: () {
+                    //     //     Navigator.push(
+                    //     //       context,
+                    //     //       MaterialPageRoute(
+                    //     //         builder: (context) => SignUp(),
+                    //     //       ),
+                    //     //     );
+                    //     //   },
+                    //     // ),
+                    //   ],
+                    // )
                   ],
                 ),
               )

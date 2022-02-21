@@ -16,6 +16,13 @@ class GenderSelection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Icon(
+            Icons.person,
+            color: Colors.purple,
+          ),
+          SizedBox(
+            width: 10,
+          ),
           Expanded(
             child: Text(
               "Gender",

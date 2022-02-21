@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/view/custom_widget/my_theme.dart';
 import 'package:flutter_application_2/view/login/student_login_page.dart';
 import 'package:flutter_application_2/view/signup/signup.dart';
-import 'package:flutter_application_2/view/welcome/student_welcome_page.dart';
 import 'package:flutter_application_2/view/welcome_page/components/background.dart';
 import 'package:flutter_application_2/view/welcome_page/components/customButton.dart';
 
-import '../login/teacher_login_page.dart';
-
 //https://github.com/alishah514/flutter_bukhari.git
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+class StudentWelcomePage extends StatelessWidget {
+  const StudentWelcomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,18 +18,14 @@ class WelcomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "ATTENDANCE MANAGEMENT SYSTEM",
+                "WELCOME STUDENTS",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              const Text(
-                "By Bukhari",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 30,
               ),
               Image.asset(
-                "images/school.png",
+                "images/student.png",
                 width: 300,
               ),
               SizedBox(
@@ -40,10 +33,10 @@ class WelcomePage extends StatelessWidget {
               ),
               customButton(
                 buttonColor: MyTheme.loginButtonColor,
-                buttonText: "STUDENT",
+                buttonText: "LOGIN",
                 textColor: Colors.white,
                 handleButtonClick: () {
-                  studentButtonClickHandler(context);
+                  loginButtonClickHandler(context);
                 },
               ),
               // ignore: prefer_const_constructors
@@ -52,10 +45,10 @@ class WelcomePage extends StatelessWidget {
               ),
               customButton(
                 buttonColor: MyTheme.signupButtonColor,
-                buttonText: "TEACHER",
+                buttonText: "SIGNUP",
                 textColor: Colors.black,
                 handleButtonClick: () {
-                  teacherButtonClickHandler(context);
+                  signupButtonClickHandler(context);
                 },
               )
             ],
@@ -65,17 +58,16 @@ class WelcomePage extends StatelessWidget {
     );
   }
 
-  studentButtonClickHandler(BuildContext context) {
-    print("Student Button Clicked");
+  loginButtonClickHandler(BuildContext context) {
+    print("Login Clicked");
 
     Navigator.push(
-        context, MaterialPageRoute(builder: (Builder) => StudentWelcomePage()));
+        context, MaterialPageRoute(builder: (Builder) => StudentLoginPage()));
   }
 
-  teacherButtonClickHandler(BuildContext context) {
+  signupButtonClickHandler(BuildContext context) {
     print("Signup Clicked");
 
-    Navigator.push(
-        context, MaterialPageRoute(builder: (Builder) => TeacherLoginPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (Builder) => SignUp()));
   }
 }

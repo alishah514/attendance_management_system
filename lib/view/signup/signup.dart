@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/view/custom_widget/my_theme.dart';
-import 'package:flutter_application_2/view/login/login_page.dart';
+import 'package:flutter_application_2/view/login/student_login_page.dart';
 import 'package:flutter_application_2/view/signup/components/gender_selection.dart';
 import 'package:flutter_application_2/view/signup/components/signup_background.dart';
 import 'package:flutter_application_2/view/signup/components/signup_textfield_decorator.dart';
@@ -12,7 +12,7 @@ class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
 
   TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+  TextEditingController rollnoController = TextEditingController();
   TextEditingController mobileController = TextEditingController();
   TextEditingController passController = TextEditingController();
   TextEditingController confirmpassController = TextEditingController();
@@ -53,11 +53,11 @@ class SignUp extends StatelessWidget {
               ),
               SignupTextFieldDecorator(
                 child: SignupUserIdTextField(
-                  useridController: emailController,
-                  userIdErrorText: "Email cannot be empty",
-                  userIdHintText: "Enter Email ID",
+                  useridController: rollnoController,
+                  userIdErrorText: "Roll No cannot be empty",
+                  userIdHintText: "Enter Roll No",
                   userIdHintTextColor: Colors.black,
-                  userIdTextFieldPrefixIcon: Icons.person,
+                  userIdTextFieldPrefixIcon: Icons.numbers_rounded,
                   userIdTextFieldPrefixIconColor: Colors.purple,
                   onUserIdValueChange: (value) {},
                 ),
@@ -68,7 +68,7 @@ class SignUp extends StatelessWidget {
                   userIdErrorText: "Mobile cannot be empty",
                   userIdHintText: "Enter Mobile",
                   userIdHintTextColor: Colors.black,
-                  userIdTextFieldPrefixIcon: Icons.person,
+                  userIdTextFieldPrefixIcon: Icons.mobile_friendly,
                   userIdTextFieldPrefixIconColor: Colors.purple,
                   onUserIdValueChange: (value) {},
                 ),
@@ -79,7 +79,7 @@ class SignUp extends StatelessWidget {
                   userIdErrorText: "Password is wrong",
                   userIdHintText: "Enter Password",
                   userIdHintTextColor: Colors.black,
-                  userIdTextFieldPrefixIcon: Icons.person,
+                  userIdTextFieldPrefixIcon: Icons.lock,
                   userIdTextFieldPrefixIconColor: Colors.purple,
                   onUserIdValueChange: (value) {},
                 ),
@@ -90,7 +90,7 @@ class SignUp extends StatelessWidget {
                   userIdErrorText: "Doesn't match with the password",
                   userIdHintText: "Confirm Password",
                   userIdHintTextColor: Colors.black,
-                  userIdTextFieldPrefixIcon: Icons.person,
+                  userIdTextFieldPrefixIcon: Icons.lock,
                   userIdTextFieldPrefixIconColor: Colors.purple,
                   onUserIdValueChange: (value) {},
                 ),
@@ -105,7 +105,9 @@ class SignUp extends StatelessWidget {
                 buttonColor: MyTheme.loginButtonColor,
                 buttonText: "Sign Up",
                 textColor: Colors.white,
-                handleButtonClick: () {},
+                handleButtonClick: () {
+                  signupButtonClickHandler(context);
+                },
               ),
               const SizedBox(
                 height: 10,
@@ -133,8 +135,10 @@ class SignUp extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LoginPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => StudentLoginPage()));
                     },
                   ),
                 ],
@@ -145,4 +149,11 @@ class SignUp extends StatelessWidget {
       ),
     );
   }
+}
+
+signupButtonClickHandler(BuildContext context) {
+  print("SignUp Clicked");
+
+  Navigator.push(
+      context, MaterialPageRoute(builder: (Builder) => StudentLoginPage()));
 }
