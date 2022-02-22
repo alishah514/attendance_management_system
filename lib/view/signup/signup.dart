@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/controller/signup_controller.dart';
 import 'package:flutter_application_2/view/custom_widget/my_theme.dart';
 import 'package:flutter_application_2/view/login/student_login_page.dart';
 import 'package:flutter_application_2/view/signup/components/gender_selection.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_application_2/view/signup/components/signup_background.d
 import 'package:flutter_application_2/view/signup/components/signup_textfield_decorator.dart';
 import 'package:flutter_application_2/view/signup/components/signup_userid_textfield.dart';
 import 'package:flutter_application_2/view/welcome_page/components/customButton.dart';
+import 'package:get/get.dart';
 import 'components/signup_profilepic.dart';
 
 class SignUp extends StatelessWidget {
@@ -16,6 +18,8 @@ class SignUp extends StatelessWidget {
   TextEditingController mobileController = TextEditingController();
   TextEditingController passController = TextEditingController();
   TextEditingController confirmpassController = TextEditingController();
+
+  SignUpController signUpController = Get.put(SignUpController());
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +40,7 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const SignUpProfilePicture(),
+              SignUpProfilePicture(),
               const SizedBox(
                 height: 20,
               ),
