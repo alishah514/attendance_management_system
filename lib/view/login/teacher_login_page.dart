@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/view/login/components/login_background.dart';
 import 'package:flutter_application_2/view/login/components/password_field.dart';
 import 'package:flutter_application_2/view/signup/signup.dart';
+import 'package:flutter_application_2/view/welcome/welcome_page.dart';
 import 'package:flutter_application_2/view/welcome_page/components/customButton.dart';
 
 import 'components/textfield_decorator.dart';
@@ -90,35 +91,35 @@ class TeacherLoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: [
-                    //     const Text(
-                    //       "Don't have account?",
-                    //       style: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //       ),
-                    //     ),
-                    //     const SizedBox(width: 5),
-                    //     // InkWell(
-                    //     //   child: const Text(
-                    //     //     "Sign Up",
-                    //     //     style: TextStyle(
-                    //     //       fontWeight: FontWeight.bold,
-                    //     //       color: Color.fromARGB(255, 0, 110, 4),
-                    //     //     ),
-                    //     //   ),
-                    //     //   onTap: () {
-                    //     //     Navigator.push(
-                    //     //       context,
-                    //     //       MaterialPageRoute(
-                    //     //         builder: (context) => SignUp(),
-                    //     //       ),
-                    //     //     );
-                    //     //   },
-                    //     // ),
-                    //   ],
-                    // )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Changed Your Mind?",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        InkWell(
+                          child: const Text(
+                            "Go Back",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 0, 110, 4),
+                            ),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => WelcomePage(),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    )
                   ],
                 ),
               )

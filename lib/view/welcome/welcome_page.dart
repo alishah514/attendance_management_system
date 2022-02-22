@@ -57,7 +57,7 @@ class WelcomePage extends StatelessWidget {
                 handleButtonClick: () {
                   teacherButtonClickHandler(context);
                 },
-              )
+              ),
             ],
           ),
         ),
