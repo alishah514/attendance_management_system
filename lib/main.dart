@@ -6,8 +6,8 @@ import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 
 main(List<String> args) async {
   runApp(const MyApp());
-  final keyApplicationId = "Nt443CzX70ZjhKpiAHfa5guC9T1Y0vgDPIZdnlVD";
-  final keyClientKey = "Fm8rv83IUrA7DtkpQKUMYKAV4ygaDQYYdkw242O2";
+  final keyApplicationId = "9s20xW7zGmiA3yIUG7fbV0nfL1hBFyfxw0KaEAr4";
+  final keyClientKey = "5zX6MLR0LOvRUc64hqj30Sa3Mnedssj6qOH37Pnw";
   final keyParseServerUrl = "https://parseapi.back4app.com";
 
   await Parse().initialize(keyApplicationId, keyParseServerUrl,

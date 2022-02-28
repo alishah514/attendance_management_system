@@ -14,9 +14,7 @@ class back4App {
     await Parse().initialize(keyApplicationId, keyParseServerUrl,
         clientKey: keyClientKey, autoSendSessionId: true);
 
-    var attendance_management_system =
-        ParseObject('attendance_management_system')
-          ..set('message', 'connnected succesfully');
-    await attendance_management_system.save();
+    var AMS = ParseObject('amc')..set('message', 'connnected succesfully');
+    await AMS.save();
   }
 }
